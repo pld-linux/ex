@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make check"
+#
 Summary:	OSSP ex - Exception Handling
 Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków
 Name:		ex
@@ -93,7 +97,8 @@ mv -f aclocal.m4 acinclude.m4
 
 %configure
 %{__make}
-%{__make} check
+
+%{?with_tests:%{__make} check}
 
 %install
 rm -rf $RPM_BUILD_ROOT
