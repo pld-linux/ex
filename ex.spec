@@ -7,7 +7,7 @@ License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9054e4325e5e182b2105566d9d02732d	
-URL:		http://www.ossp.org/pkg/lib/%{name}/
+URL:		http://www.ossp.org/pkg/lib/ex/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
