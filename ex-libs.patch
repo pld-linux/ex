@@ -1,0 +1,20 @@
+--- ex-1.0.4/Makefile.in~	2004-03-25 19:59:13.000000000 +0100
++++ ex-1.0.4/Makefile.in	2004-11-28 15:36:10.000000000 +0100
+@@ -72,7 +72,7 @@
+ 
+ $(LIB_NAME): $(LIB_OBJS)
+ 	@$(LIBTOOL) --mode=link $(CC) -o $(LIB_NAME) $(LIB_OBJS) -rpath $(libdir) \
+-	    -version-info `$(SHTOOL) version -l txt -d libtool VERSION`
++	    -version-info `$(SHTOOL) version -l txt -d libtool VERSION` $(LIBS)
+ 
+ $(TST_NAME): $(TST_OBJS) $(LIB_NAME)
+ 	@$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $(TST_NAME) $(TST_OBJS) $(LIB_NAME) $(LIBS)
+@@ -99,7 +99,7 @@
+ 	$(SHTOOL) install -c -m 755 ex-config $(DESTDIR)$(bindir)/
+ 	$(SHTOOL) install -c -m 644 ex.h $(DESTDIR)$(includedir)/
+ 	$(SHTOOL) install -c -m 644 ex.3 $(DESTDIR)$(mandir)/man3/
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libex.la $(DESTDIR)$(libdir)/
++	@$(LIBTOOL) --mode=install $(SHTOOL) install -c libex.la $(DESTDIR)$(libdir)/
+ 
+ uninstall:
+ 	@$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(libdir)/libex.la
