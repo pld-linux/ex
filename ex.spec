@@ -3,6 +3,7 @@ Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków
 Name:		ex
 Version:	1.0.4
 Release:	0.1
+Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/ex/%{name}-%{version}.tar.gz
