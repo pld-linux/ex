@@ -5,13 +5,12 @@ Version:	1.0.4
 Release:	0.1
 License:	distributable (see README)
 Group:		Libraries
-Source0:	ftp://ftp.ossp.org/pkg/lib/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.ossp.org/pkg/lib/ex/%{name}-%{version}.tar.gz
 # Source0-md5:	9054e4325e5e182b2105566d9d02732d	
 URL:		http://www.ossp.org/pkg/lib/ex/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,11 +34,30 @@ facility and optionally support multi-threading environments by
 allowing you to store the exception catching stack in a thread-safe
 way.
 
-#%%description -l pl
+%description -l pl
+OSSP ex to ma³a biblioteka do obs³ugi wyj±tków w stylu ISO-C++
+przeznaczona do u¿ywania w jêzyku ISO-C. Umo¿liwia korzystanie z
+paradygmatu rzucania i wy³apywania wyj±tków w celi ograniczenia
+ilo¶ci kodu obs³uguj±cego b³êdy bez czynienia programu ubo¿szym.
+
+Zosta³o to osi±gniête poprzez bezpo¶rednie przesy³anie wyj±tkowych
+kodów powrotu (i przep³ywu sterowania programu) z miejsca gdzie
+wyst±pi³ wyj±tek (miejsca rzucenia) do miejsca jego obs³ugi (miejsca
+wy³apania) - zwykle z g³êboko zagnie¿d¿onej podprocedury do procedury
+nadrzêdnej. Po¶rednie procedury nie musz± siê ju¿ upewniaæ, ¿e
+wyj±tkowe kody powrotu z podprocedur s± poprawnie przekazywane do z
+powrotem do rodzica.
+
+U³atwienia OSSP ex daj± tak¿e zaawansowane mo¿liwo¶ci obs³ugi
+wyj±tków, takie jak os³aniane i opó¼nione wyj±tki. Ponadto OSSP ex
+umo¿liwia wybór udogodnieñ maszyny prze³±czaj±cej kontekst oraz
+opcjonaln± obs³ugê ¶rodowisk wielow±tkowych poprzez umo¿liwienie
+przechowywania stosu wy³apywania wyj±tków w sposób bezpieczny dla
+w±tków.
 
 %package devel
-Summary:	OSSP sio - Exception Handling - header files and development libraries
-Summary(pl):	OSSP sio - biblioteka obs³ugi wyj±tków - pliki nag³ówkowe i biblioteki dla deweloperów
+Summary:	OSSP ex - Exception Handling - header files and development libraries
+Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków - pliki nag³ówkowe i biblioteki dla deweloperów
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -52,8 +70,8 @@ OSSP ex - biblioteka obs³ugi wyj±tków - pliki nag³ówkowe i biblioteki
 dla deweloperów.
 
 %package static
-Summary:	OSSP sio - Exception Handling - static libraries
-Summary(pl):	OSSP sio - biblioteka obs³ugi wyj±tków - biblioteki statyczne
+Summary:	OSSP ex - Exception Handling - static libraries
+Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
@@ -65,6 +83,7 @@ OSSP ex - biblioteka obs³ugi wyj±tków - biblioteki statyczne.
 
 %prep
 %setup -q
+
 %build
 mv -f aclocal.m4 acinclude.m4
 %{__libtoolize}
@@ -84,9 +103,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
