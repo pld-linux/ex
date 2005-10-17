@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without  static_libs # don't build static libraries
-%bcond_without	tests # don't perform "make check"
+%bcond_without	static_libs	# don't build static libraries
+%bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP ex - Exception Handling
 Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków
