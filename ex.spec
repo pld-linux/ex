@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP ex - Exception Handling
-Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków
+Summary(pl.UTF-8):   OSSP ex - biblioteka obsÅ‚ugi wyjÄ…tkÃ³w
 Name:		ex
 Version:	1.0.5
 Release:	0.1
@@ -41,30 +41,30 @@ facility and optionally support multi-threading environments by
 allowing you to store the exception catching stack in a thread-safe
 way.
 
-%description -l pl
-OSSP ex to ma³a biblioteka do obs³ugi wyj±tków w stylu ISO-C++
-przeznaczona do u¿ywania w jêzyku ISO-C. Umo¿liwia korzystanie z
-paradygmatu rzucania i wy³apywania wyj±tków w celi ograniczenia
-ilo¶ci kodu obs³uguj±cego b³êdy bez czynienia programu ubo¿szym.
+%description -l pl.UTF-8
+OSSP ex to maÅ‚a biblioteka do obsÅ‚ugi wyjÄ…tkÃ³w w stylu ISO-C++
+przeznaczona do uÅ¼ywania w jÄ™zyku ISO-C. UmoÅ¼liwia korzystanie z
+paradygmatu rzucania i wyÅ‚apywania wyjÄ…tkÃ³w w celi ograniczenia
+iloÅ›ci kodu obsÅ‚ugujÄ…cego bÅ‚Ä™dy bez czynienia programu uboÅ¼szym.
 
-Zosta³o to osi±gniête poprzez bezpo¶rednie przesy³anie wyj±tkowych
-kodów powrotu (i przep³ywu sterowania programu) z miejsca gdzie
-wyst±pi³ wyj±tek (miejsca rzucenia) do miejsca jego obs³ugi (miejsca
-wy³apania) - zwykle z g³êboko zagnie¿d¿onej podprocedury do procedury
-nadrzêdnej. Po¶rednie procedury nie musz± siê ju¿ upewniaæ, ¿e
-wyj±tkowe kody powrotu z podprocedur s± poprawnie przekazywane do z
+ZostaÅ‚o to osiÄ…gniÄ™te poprzez bezpoÅ›rednie przesyÅ‚anie wyjÄ…tkowych
+kodÃ³w powrotu (i przepÅ‚ywu sterowania programu) z miejsca gdzie
+wystÄ…piÅ‚ wyjÄ…tek (miejsca rzucenia) do miejsca jego obsÅ‚ugi (miejsca
+wyÅ‚apania) - zwykle z gÅ‚Ä™boko zagnieÅ¼dÅ¼onej podprocedury do procedury
+nadrzÄ™dnej. PoÅ›rednie procedury nie muszÄ… siÄ™ juÅ¼ upewniaÄ‡, Å¼e
+wyjÄ…tkowe kody powrotu z podprocedur sÄ… poprawnie przekazywane do z
 powrotem do rodzica.
 
-U³atwienia OSSP ex daj± tak¿e zaawansowane mo¿liwo¶ci obs³ugi
-wyj±tków, takie jak os³aniane i opó¼nione wyj±tki. Ponadto OSSP ex
-umo¿liwia wybór udogodnieñ maszyny prze³±czaj±cej kontekst oraz
-opcjonaln± obs³ugê ¶rodowisk wielow±tkowych poprzez umo¿liwienie
-przechowywania stosu wy³apywania wyj±tków w sposób bezpieczny dla
-w±tków.
+UÅ‚atwienia OSSP ex dajÄ… takÅ¼e zaawansowane moÅ¼liwoÅ›ci obsÅ‚ugi
+wyjÄ…tkÃ³w, takie jak osÅ‚aniane i opÃ³Åºnione wyjÄ…tki. Ponadto OSSP ex
+umoÅ¼liwia wybÃ³r udogodnieÅ„ maszyny przeÅ‚Ä…czajÄ…cej kontekst oraz
+opcjonalnÄ… obsÅ‚ugÄ™ Å›rodowisk wielowÄ…tkowych poprzez umoÅ¼liwienie
+przechowywania stosu wyÅ‚apywania wyjÄ…tkÃ³w w sposÃ³b bezpieczny dla
+wÄ…tkÃ³w.
 
 %package devel
 Summary:	OSSP ex - Exception Handling - header files and development libraries
-Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków - pliki nag³ówkowe i biblioteki dla deweloperów
+Summary(pl.UTF-8):   OSSP ex - biblioteka obsÅ‚ugi wyjÄ…tkÃ³w - pliki nagÅ‚Ã³wkowe i biblioteki dla deweloperÃ³w
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -72,21 +72,21 @@ Requires:	%{name} = %{epoch}:%{version}-%{release}
 OSSP ex - Exception Handling - header files and development
 libraries.
 
-%description devel -l pl
-OSSP ex - biblioteka obs³ugi wyj±tków - pliki nag³ówkowe i biblioteki
-dla deweloperów.
+%description devel -l pl.UTF-8
+OSSP ex - biblioteka obsÅ‚ugi wyjÄ…tkÃ³w - pliki nagÅ‚Ã³wkowe i biblioteki
+dla deweloperÃ³w.
 
 %package static
 Summary:	OSSP ex - Exception Handling - static libraries
-Summary(pl):	OSSP ex - biblioteka obs³ugi wyj±tków - biblioteki statyczne
+Summary(pl.UTF-8):   OSSP ex - biblioteka obsÅ‚ugi wyjÄ…tkÃ³w - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 OSSP ex - Exception Handling - static libraries.
 
-%description static -l pl
-OSSP ex - biblioteka obs³ugi wyj±tków - biblioteki statyczne.
+%description static -l pl.UTF-8
+OSSP ex - biblioteka obsÅ‚ugi wyjÄ…tkÃ³w - biblioteki statyczne.
 
 %prep
 %setup -q
