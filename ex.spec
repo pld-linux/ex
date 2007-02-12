@@ -4,7 +4,7 @@
 %bcond_without	tests		# don't perform "make check"
 #
 Summary:	OSSP ex - Exception Handling
-Summary(pl.UTF-8):   OSSP ex - biblioteka obsługi wyjątków
+Summary(pl.UTF-8):	OSSP ex - biblioteka obsługi wyjątków
 Name:		ex
 Version:	1.0.5
 Release:	0.1
@@ -64,7 +64,7 @@ wątków.
 
 %package devel
 Summary:	OSSP ex - Exception Handling - header files and development libraries
-Summary(pl.UTF-8):   OSSP ex - biblioteka obsługi wyjątków - pliki nagłówkowe i biblioteki dla deweloperów
+Summary(pl.UTF-8):	OSSP ex - biblioteka obsługi wyjątków - pliki nagłówkowe i biblioteki dla deweloperów
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -78,7 +78,7 @@ dla deweloperów.
 
 %package static
 Summary:	OSSP ex - Exception Handling - static libraries
-Summary(pl.UTF-8):   OSSP ex - biblioteka obsługi wyjątków - biblioteki statyczne
+Summary(pl.UTF-8):	OSSP ex - biblioteka obsługi wyjątków - biblioteki statyczne
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
