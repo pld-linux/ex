@@ -6,13 +6,13 @@
 Summary:	OSSP ex - Exception Handling
 Summary(pl.UTF-8):	OSSP ex - biblioteka obsługi wyjątków
 Name:		ex
-Version:	1.0.5
+Version:	1.0.6
 Release:	0.1
 Epoch:		0
 License:	distributable (see README)
 Group:		Libraries
 Source0:	ftp://ftp.ossp.org/pkg/lib/ex/%{name}-%{version}.tar.gz
-# Source0-md5:	419f0915cb578f9eb3bfc483bc49f066
+# Source0-md5:	20ff7fb1c49968c51b77e4c669a67e25
 Patch0:		%{name}-libs.patch
 URL:		http://www.ossp.org/pkg/lib/ex/
 BuildRequires:	autoconf
